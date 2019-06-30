@@ -1,0 +1,31 @@
+/*creating a header to display website name*/
+.header{
+    /*background-color:#FFEB3B;*/
+   /*background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);*/
+   /*background: linear-gradient(to right, #373b44, #4286f4);*/
+   background:#0066a1;
+   padding: 0.5%;
+}
+/*creating a custom background color for bootstrap navbar*/
+.navbar-custom{
+   background:#1e94d3;
+}
+
+/*to create toggler icon that is in modern design compared to bootstrap navbar toggler*/
+.navbar-toggler-icon{
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+   border-color:rgb(255,255,255);
+}
+
+
+.btn{
+   background: green;
+}
+
+/*to display a dark blue background when mouse is hovered over navbar tabs*/
+.navbar-collapse a:hover {
+   background-color: #0066a1;
+   margin: 0%;
+ }
+
+ 

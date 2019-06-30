@@ -1,0 +1,18 @@
+/*applies background to the whole searcharticle template*/
+.page{
+    background:#acc7dc;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+}
+/*applies background color when the cards are loaded*/
+.container{
+    position: relative;
+    min-width: 100%;
+    background:#acc7dc;
+}
+
+/*applies blue color hovering effect to the sub categories drop down menu*/
+.dropdown .dropdown-menu a:hover{
+    background: #87cefa;
+}

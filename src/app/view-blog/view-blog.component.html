@@ -1,0 +1,61 @@
+<!--This template displays news which are in relation to the keyword typed by the user-->
+<div class="page"></div>
+
+
+
+
+<div class="container pb-5">
+  
+    
+      <br>
+
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+          <p style="font-size: 32px;font-family: 'Oswald', sans-serif;">Read the full blog</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4" style="text-align:right">
+          <div class="dropdown" style="align-self: auto">
+            <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Sub-categories
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <!--linking routes of different components-->
+              <a class="dropdown-item" href="#">Edit</a>
+              <a class="dropdown-item" href="#" (click)="goBackToPreviousPage()">Go Back</a>
+              <a class="dropdown-item" href="#">Delete</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <br>
+
+
+
+
+      <div class="row" *ngIf="currentBlog">
+        <div class="col">
+          <div class="card">
+            <div class="card  bg-light">
+              <div class="card-header">{{currentBlog.title}}</div>
+              <img class="card-img-top" src="{{currentBlog.img}}" alt="image unavailable">
+              <div class="card-body">
+                <h5 class="card-title" style="text-align: justify">{{currentBlog.title}}</h5>
+                <p class="card-text" style="text-align: justify">{{currentBlog.bodyHtml}}</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    
+  
+</div>

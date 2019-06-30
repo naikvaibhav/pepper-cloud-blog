@@ -1,0 +1,16 @@
+/*applies background color when the cards are loaded*/
+.container{
+    background:#acc7dc;
+    position: relative;
+    min-width: 100%;
+}
+
+
+
+/*applies background to the whole home template*/
+.page{
+    background:#acc7dc;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+}

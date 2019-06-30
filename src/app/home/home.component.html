@@ -1,0 +1,64 @@
+<!--This template displays headblogs from india-->
+<div class="page"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <br>
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+          <p style="font-size: 32px;font-family: 'Oswald', sans-serif;">All blog's</p>
+        </div>
+       
+      </div>
+      <br>
+      <!--ng template is used to show bootstrap spinner till the cards are loaded-->
+      <ng-template #loading>
+        <div style="text-align: center">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </ng-template>
+
+      <!--
+<div class="card-group" *ngFor = "let blog of allBlogs">
+    <div class="card bg-light mb-3">
+      <div class="card-header"><b>News Provider : {{blog.source.name}}</b></div>
+      <a href="{{blog.url}}"><img class="card-img-top" src="{{blog.urlToImage}}" alt="Card image cap"></a>
+      <div class="card-body">
+        <h5 class="card-title">{{blog.title}}</h5>
+        <p class="card-text">{{blog.description}}</p>
+        <p class="card-text">{{blog.content}}</p>
+        <p><small class="text-muted">Published at : {{blog.publishedAt}}</small></p>
+      </div>
+    </div>
+    
+    
+  </div>-->
+      <!--if allBlogs object isnt fetched then the spinner will keep on spinning-->
+      <div class="row ml-1 mr-1" *ngIf="allBlogs; else loading">
+        <div class="col-md-4 mb-5" *ngFor="let blog of allBlogs">
+          <div class="card-deck">
+            <div class="card  bg-light">
+              <div class="card-header">{{blog.title}}</div>
+              <img class="card-img-top" src="{{blog.img}}" alt="image unavailable">
+              <div class="card-body">
+                <h5 class="card-title" style="text-align: justify">{{blog.title}}</h5>
+                <p class="card-text" style="text-align: justify">{{blog.description}}</p>
+                <!--<p class="card-text">{{blog.content|slice:0:-13}}</p>-->
+                <a [routerLink]="['/blog',blog.blogId]" class="btn btn-primary rounded-pill" style="display:block;white-space: nowrap;
+          text-align: center">View full story here</a>
+              </div>
+              <!--date:'medium' is one of the angular pipes to convert utc time to user readable form-->
+              <div class="card-footer text-muted">Published on : </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
